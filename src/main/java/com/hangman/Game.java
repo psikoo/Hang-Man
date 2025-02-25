@@ -10,21 +10,25 @@ public class Game {
   private static void gameLoop() {
     @SuppressWarnings("resource")
     Scanner scanner = new Scanner(System.in);
-    //Word.reset(); vacia las letras usadas
-    boolean exit = false;
-    while (!exit) {
-      String word = "test"; //Word.getRandomWord();
-      System.out.println("Used characters: "); //+Word.getUsedChars()
-      System.out.print("Input a character or word: ");
+
+    Word.reset();
+    Word.genRandomWord();
+    
+    boolean correct = false;
+    while (!correct) {
+      System.out.println("> ---------------------------------------- <");
+      System.out.println("> Word: "+Word.getWordHidden());
+      System.out.println("> Used characters: "+Word.getUsedChars());
+      System.out.print("> Input a character or word: ");
       String input = scanner.nextLine();
-      if(input.length() == 1) {
-        //Word.checkChar(word, char)
-      } else if(input.length() > 1) {
-        if(input == word) {
-          System.out.println("CORRECT");
-        } else {
-          System.out.println("Womp Womp wrong");
-        }
+      System.out.println("> ---------------------------------------- <");
+
+
+      if(input.length() == 1) { // User has input a character
+        Word.checkChar(input.charAt(0));
+      } else if(input.length() > 1) { // User has input a word
+        correct = Word.checkWord(input);
+        if(correct) System.out.println("Correct!");
       }
     }
   }
