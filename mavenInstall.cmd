@@ -8,22 +8,22 @@ echo ^| Starting maven automated setup ^|
 echo #--------------------------------#
 
 cd %desktop%
-if not exist "%desktop%\projectname" ( 
-    mkdir "projectname"
-    cd "%desktop%\projectname"
-) else ( cd "%desktop%\projectname" )
+if not exist "%desktop%\hangman" ( 
+    mkdir "hangman"
+    cd "%desktop%\hangman"
+) else ( cd "%desktop%\hangman" )
 
 if exist README.md ( del README.md )
 if exist start.cmd ( del start.cmd )
-if exist projectname.jar ( del projectname.jar )
-if exist projectname-1-jar-with-dependencies.jar ( del projectname-1-jar-with-dependencies.jar )
+if exist hangman.jar ( del hangman.jar )
+if exist hangman-1-jar-with-dependencies.jar ( del hangman-1-jar-with-dependencies.jar )
 
-copy "%workingDir%\README.md" "%desktop%\projectname" >NUL
-copy "%workingDir%\src\main\resources\start.cmd" "%desktop%\projectname" >NUL
-copy "%workingDir%\target\projectname-1-jar-with-dependencies.jar" "%desktop%\projectname" >NUL
+copy "%workingDir%\README.md" "%desktop%\hangman" >NUL
+copy "%workingDir%\src\main\resources\start.cmd" "%desktop%\hangman" >NUL
+copy "%workingDir%\target\hangman-1-jar-with-dependencies.jar" "%desktop%\hangman" >NUL
 
-cd "%desktop%\projectname"
-ren projectname-1-jar-with-dependencies.jar projectname.jar
+cd "%desktop%\hangman"
+ren hangman-1-jar-with-dependencies.jar hangman.jar
 
 echo ^| Copying files                  ^|
 echo #--------------------------------#

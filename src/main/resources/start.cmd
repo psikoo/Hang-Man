@@ -1,3 +1,3 @@
-java -jar projectname.jar
+java -jar hangman.jar
 
 PAUSE

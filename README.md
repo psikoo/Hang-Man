@@ -22,11 +22,11 @@ mvn clean validate compile assembly:assembly -DdescriptorId=jar-with-dependencie
 ```
 
 - mavenInstall.cmd:
-maven install.cmd is a script that runs during the full build process, its main purpose is to create a folder named "projectname" in your desktop that contains everything necessary to run the program. It copies in the .jar, readme, and start.cmd.
+maven install.cmd is a script that runs during the full build process, its main purpose is to create a folder named "hangman" in your desktop that contains everything necessary to run the program. It copies in the .jar, readme, and start.cmd.
 
 - ⚠ Linux and macOS
-mavenInstall.cmd only a utility script and its not needed for the building process, it runs after the .jar is built. If you are building this on linux or macOS you can get the game .jar from "target/projectname-1-jar-with-dependencies.jar", run it using `java -jar projectname-1-jar-with-dependencies.jar`
+mavenInstall.cmd only a utility script and its not needed for the building process, it runs after the .jar is built. If you are building this on linux or macOS you can get the game .jar from "target/hangman-1-jar-with-dependencies.jar", run it using `java -jar hangman-1-jar-with-dependencies.jar`
 
-## What if i don't want my project name to be "projectname"
+## What if i don't want my project name to be "hangman"
 
-Change every instance of "projectname" to what ever you want (lowercase and no spaces), you can find "projectname inside mavenInstall.cmd, pom.xml, start.cmd and Main.java. Lastly, you will need to change name of the folder "src/main/java/com/projectname".
+Change every instance of "hangman" to what ever you want (lowercase and no spaces), you can find "hangman inside mavenInstall.cmd, pom.xml, start.cmd and Main.java. Lastly, you will need to change name of the folder "src/main/java/com/hangman".
