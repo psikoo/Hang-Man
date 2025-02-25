@@ -14,8 +14,8 @@ public class Word {
         // A
         allWords.add("caca");
         allWords.add("pis");
-       allWords.add("semen");
-       allWords.add("carlos");
+        allWords.add("semen");
+        allWords.add("carlos");
     }
 
     // Método para elegir una palabra aleatoria que no haya sido usada
