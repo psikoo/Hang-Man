@@ -1,7 +1,5 @@
 package com.hangman;
 
-public class Word {
-    
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -50,9 +48,4 @@ public class Word {
     public ArrayList<String> getUsedWords() {
         return usedWords;
     }
-}
-
-
-
-
 }
