@@ -32,20 +32,24 @@ public class Word {
   }
 
   public static void checkChar(char character) {
+    int count = 0;
     usedChars.add(String.valueOf(character));
     char[] wordHiddenChar = wordHidden.toCharArray();
     for(int i = 0; i < word.length(); i++) {
       if(word.charAt(i) == character) {
+        count += 1;
         wordHiddenChar[i] = character;
       }
     }
     wordHidden = String.valueOf(wordHiddenChar);
+    if(count == 0) { Man.increaseFails(); }
   }
 
   public static boolean checkWord(String input) {
     if(input.equals(word)) {
       return true;
     } else {
+      Man.increaseFails();
       return false;
     }
   }
