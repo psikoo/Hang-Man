@@ -10,19 +10,20 @@ public class Game {
   }
 
   private static void gameLoop() {
+    @SuppressWarnings("resource")
+    Scanner scanner = new Scanner(System.in);
+    
     Word.reset();
     Word.genRandomWord();
     
     while (!gameLoop) {
       System.out.print("\033c\033[2J");
-      System.out.println("> ---------------------------------------- <");
+
       System.out.println(Man.getMan());
       if(Man.getLost()) { System.out.println("You lost!"); gameLoop = true; } 
       else { displayInfo(); }
     }
-
-    //TODO add question to play again
-  }
+  } 
 
   private static void displayInfo() {
     @SuppressWarnings("resource")

@@ -7,7 +7,6 @@ public class Main {
         System.out.println("reg add HKEY_CURRENT_USER\\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x00000001 /f");
         System.out.print("\033c\033[2J");
         // Game
-        new Menu();
         new Game();
     }
 }
