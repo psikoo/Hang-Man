@@ -6,8 +6,8 @@ import java.util.Random;
 public class Word {
   private static String word = "";
   private static String wordHidden = "";
-  private static ArrayList<String> words = new ArrayList<>();;
-  private static ArrayList<String> usedChars = new ArrayList<>();;
+  private static ArrayList<String> words = new ArrayList<>();
+  private static ArrayList<String> usedChars = new ArrayList<>();
 
   public static String getWord() { return word; }
   public static String getWordHidden() { return wordHidden; }
