@@ -9,10 +9,7 @@ public class Game {
     gameLoop(); 
   }
 
-  private static void gameLoop() {
-    @SuppressWarnings("resource")
-    Scanner scanner = new Scanner(System.in);
-    
+  private static void gameLoop() {    
     Word.reset();
     Word.genRandomWord();
     
@@ -43,7 +40,7 @@ public class Game {
     } else if(input.length() > 1) { // User has input a word
       gameLoop = Word.checkWord(input);
       if(gameLoop) {
-        System.out.println("gameLoop!");
+        System.out.println("You won!");
         gameLoop = true;
       }
     }
