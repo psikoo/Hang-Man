@@ -1,5 +1,6 @@
 .vscode
 /target
+/build
 effective-pom.xml
 # Compiled class file
 *.class
