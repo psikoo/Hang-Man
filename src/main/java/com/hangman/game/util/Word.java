@@ -1,4 +1,4 @@
-package com.hangman;
+package com.hangman.game.util;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -13,6 +13,10 @@ public class Word {
   public static String getWordHidden() { return wordHidden; }
   public static ArrayList<String> getUsedChars() { return usedChars; }
 
+  public Word() {
+    addPass();
+  }
+
   public static void reset() { 
     word = "";
     wordHidden = "";
@@ -20,7 +24,6 @@ public class Word {
   }
 
   public static void genRandomWord() {
-    addPass();
     Random random = new Random();
     String randomWord = words.get(random.nextInt(words.size()));
     word = randomWord;
